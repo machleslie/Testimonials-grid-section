@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+
+    /* ### Primary */
+
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+/* ### Neutral */
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+body{
+    font-family: "Barlow Semi Condensed";
+    background: var(--Light-grayish-blue);
+}
+img{
+    border-radius: 40px;
+    height: 3em;
+    margin-right: 15px;
+}
+.introsec{
+    display: flex;
+    font-size: 0.9em;
+    align-items: center;
+    
+}
+.heading{
+    margin: 0;
+    line-height: 0em;
+    font-weight: 500;
+}
+.column1{
+    background: var(--Moderate-violet);
+    color: white;
+    grid-column: span 2;
+}
+.column2{
+    background: var(--Very-dark-grayish-blue);
+    color: white;
+}
+.column3 , .column5{
+    color: var(--Very-dark-grayish-blue);
+    background: var(--White);
+}
+.column4{
+    background: var(--Very-dark-blackish-blue);
+    color: white;
+    grid-column: span 2;
+}
+.item{
+    padding: 5%;
+    border-radius: 1em;
+}
+.column5{
+    grid-column-start: 4;
+    grid-row: span 2;
+    grid-column-end:-1 ;
+}
+.column3{
+    grid-column: 1/1;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+    margin: 10%;
+}
+p{
+    font-weight: 50;
+}
+h4{
+    font-weight: 300;
+}
+h3{
+    font-weight: 500;
+}
+.heading :first-child{
+    font-weight: 500;
+}
+@media screen and (max-width:769px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .item{
+        border-radius: 0.5em;
+    }
+}
+@media screen and (max-width:321px){
+    body{
+        font-size: 0.8em;
+    }
+}
