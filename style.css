@@ -37,6 +37,7 @@ img{
     background: var(--Moderate-violet);
     color: white;
     grid-column: span 2;
+    position: relative;
 }
 .column2{
     background: var(--Very-dark-grayish-blue);
@@ -97,5 +98,27 @@ h3{
 @media screen and (max-width:321px){
     body{
         font-size: 0.8em;
+        background: darkblue;
     }
+    .quote{
+        left: 60%;
+    }
+}
+@media screen and (max-width:426px){
+    .quote{
+        border: solid;
+        left: 0px;
+    }
+    }
+.column1>h3{
+    z-index: 2;
+    position: relative;
+}
+.quote{
+    position: absolute;
+    width: 200em;
+    top: 1em;
+    left: 25em;
+    z-index: 1;
+    width: fit-content;
 }
